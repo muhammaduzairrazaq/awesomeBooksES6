@@ -37,7 +37,7 @@ header {
   width: 100%;
 }
 
-.logo {
+#logo {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -252,7 +252,7 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  .logo {
+  #logo {
     display: none;
   }
 
