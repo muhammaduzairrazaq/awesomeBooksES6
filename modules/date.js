@@ -1,20 +1,6 @@
-function formatTime(date) {
-  const options = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true,
-  };
-  return date.toLocaleDateString(undefined, options);
-}
-
-function updateTime() {
-  const now = new Date();
-  const formattedTime = formatTime(now);
+import { DateTime } from "luxon";
+export function updateTime() {
+  const time = DateTime.now();
+  const formattedTime = time.toFormat("LLL dd, yyyy, h:mm:ss a");
   document.getElementById('dateTime').textContent = formattedTime;
 }
-updateTime();
-setInterval(updateTime, 1000);
